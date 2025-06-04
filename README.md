@@ -2,21 +2,25 @@
 ---
 
 ## Table of Content
-- [Project Overview and Objectives](#project-overview-and-objectives)
-- [Tools used](#tools-used)
-- [Methodology and Process](#methodology-and-process)
-  - [Data Collection/Data Source](#data-collectiondata-source)
-  - [Data Preparation/Cleaning](#data-preparationcleaning)
-- [Recommendations](#recommendations)
+- [1. Project Overview and Objectives](#1-project-overview-and-objectives)
+- [2. Tools used](#2-tools-used)
+- [3. Methodology and Process](#3-methodology-and-process)
+  - [3.1. Data Collection/Data Source](#31-data-collectiondata-source)
+  - [3.2. Data Preparation/Cleaning](#32-data-preparationcleaning)
+  - [3.3. Data Modelling and Transfomation](#33-data-modelling-and-transfomation)
+  - [Exploratory Data Analysis](#34-exploratory-data-analysis)
+  - [3.5. Results/Insights](#35-resultsinsights)
+  - [3.6. Data Visualization](#36-data-visualization)
+- [4. Recommendations](#4-recommendations)
 
 ---
 
 
-## Project Overview and Objectives
-### Overview
+## 1. Project Overview and Objectives
+### 1.1. Overview
 This project aims to provide insights on automotive sales performance of particular dealerships and regions in the United Sates in the year 2022 and 2023. With the analysis of different aspects of the automotive data, I seek to identify trends and patterns in revenue and customer preferences, and provide data informed recommendations for customers and potential new dealers.
 
-### Project Objectives
+### 1.2. Project Objectives
 To provide guidance in the project, I set the following objectives:
 - Analyze revenue and sales trends across dealerships, brands, and regions to identify growth opportunities.
    - What is the total revenue generated over the two years?
@@ -36,17 +40,17 @@ To provide guidance in the project, I set the following objectives:
 - Identify top-performing dealerships and regions to guide expansion or resource allocation.
   - Which dealer sold the most cars and generated the highest revenue?
 
-## Tools used
+## 2. Tools used
 - Microsoft Excel: Data Inspection
 - Power Query (Power BI): Data Cleaning
 - Power BI: For Exploratory Data Analysis, Data Modelling and Visualization
 
-## Methodology and Process
-### Data Collection/Data Source
+## 3. Methodology and Process
+### 3.1. Data Collection/Data Source
 The data used in this project is the `Car Sales.xlsx - car_data.csv` file which covers automotive car sales in the United States from 1st January 2022 to the
 30th December 2023. The data was made available on Kaggle by [Vasu Avasthi](https://www.kaggle.com/missionjee) and it can be accessed [here](https://www.kaggle.com/datasets/missionjee/car-sales-report).
 
-### Data Preparation/Cleaning
+### 3.2. Data Preparation/Cleaning
 In the prepation and cleaning phase, I performed the following tasks:
 - Data Inspection: I loaded the data in Microsoft Excel to have an overview of the data. After that, I then loaded the data IN Power BI for further inspection.
 - Date Dimension Table creation: After inspecting the data, I realized that to properly perform time/date analysis, I had to create a date dimesion table where I could split the date into more elements/components. After creating the table, I then proceeded to split/break the date into the following components for time analysis purposes:
@@ -70,13 +74,13 @@ With the source here being `2022/01/01` as it was the start temporal coverage st
 
 - Data formating: Here I renamed the sales table, renamed some columns and changed the data types of some columns.
 
-### Data Modelling and Transfomation
-#### Data Modelling
+### 3.3. Data Modelling and Transfomation
+#### 3.3.1. Data Modelling
 After creating the date dimension table, I then created a relationship between the *Date table* and the *Car Sales* table through the `Date` column in each of the two tables.
 
 <img width="386" alt="Data Modelling" src="https://github.com/user-attachments/assets/2f1140cb-0bfa-4d84-8294-fb28e6188e43" />
 
-#### Data Transformation
+#### 3.3.2. Data Transformation
 Here I created some calculated measures and calculated columns to help me in my analysis. To keep things clean, I decided to create a table for all measures which I named *Measure Table*. All the calculated measures and calculated columns I created for this project can be accessed [here]()
 
 **Here some measures I used:**
@@ -172,9 +176,9 @@ SWITCH(
     "Unknown"
 )
 ```
-### Exploratory Data Analysis
+### 3.4. Exploratory Data Analysis
 
-#### Customer Identifier issue
+#### 3.4.1. Customer Identifier issue
 After initial exploratory analysis of the data I noticed that it was missing a unique identifier for customers; the only identifier in the table was the column `Customer Name` which only had customers first and since some customers had the same first name, this was creating an aggregation issue. This can be seen in the table below where one customer (Thomas) appeared to have bought 90 cars in a space of 2 years; this didn't seem realistic. 
 
 <img width="250" alt="image" src="https://github.com/user-attachments/assets/db612e60-5912-40b7-97b0-5a4acda6f351" />
@@ -190,7 +194,7 @@ After this workaround, the numbers pulled seemed more realistic although they ca
 
 <img width="250" alt="image" src="https://github.com/user-attachments/assets/12582415-68c1-4d94-892b-e5f52dbf4173" />
 
-### Some Data Exploratory Insights
+### 3.4.2. Some Data Exploratory Insights
 After this I did some further exploratory analysis to try to answer the business questions and meet the objectives set at the beginning of the project.
 
 Here are some insights found:
@@ -222,13 +226,13 @@ SWITCH(
 
 ![image](https://github.com/user-attachments/assets/923ebdf1-27de-434c-aff1-b337cc280a2c)
 
-### Results/Insights
+### 3.5. Results/Insights
 Here are the key insights I found in my analysis
-#### Revenue & Sales Growth
+#### 3.5.1. Revenue & Sales Growth
 - Total Revenue: $672M over 2 years, with 23.3% growth from 2022 ($300M) to 2023 ($370M).
 - Total Cars Sold: 23,906 (10,645 in 2022 → 13,226 in 2023; 24.2% growth).
 - Customer Growth: 20,657 total customers (9,630 in 2022 → 11,890 in 2023), averaging $32.5K revenue per customer.
-#### Top Performers
+#### 3.5.2. Top Performers
 - Dealerships:
  - Progressive Shippers Cooperative Association (1,318 cars, $36.7M) and Rabun Used Car Sales (1,313 cars, $37.4M) led in sales.
  - Progressive Shippers had 26% revenue growth ($16.2M → $20.4M).
@@ -240,26 +244,26 @@ Here are the key insights I found in my analysis
 - Models:
  - Lexus LS400: Highest revenue ($14.3M, 354 cars).
  - Mitsubishi Diamante: Most sold (418 cars, $9.3M).
-#### Customer & Vehicle Preferences
+#### 3.5.3. Customer & Vehicle Preferences
 - Demographics:
  - 78% of revenue ($524M) came from high-income earners.
  - Male customers contributed 78.5% of revenue ($527M).
 - Vehicle Features:
  - Body Style: SUVs ($170.6M) and hatchbacks ($166.2M) led revenue.
  - Transmission: 52.6% of sales were automatic (12,571 cars).
-#### Seasonal Trends
+#### 3.5.4. Seasonal Trends
 - Peaks:
  - May: 1,895 cars sold ($48.8M).
  - September: 3,305 cars ($93.6M).
  - December: 3,511 cars ($98.3M).
 - Lowest Avg. Price: March ($27,170).
 
-### Data Visualization
+### 3.6. Data Visualization
 After the explorarory data analysis, I developed dashboards to present properly the insights I got.
 
 I grouped the charts into 5 dashboards/pages: Summary, Customer Details, Dealers Details, Car Spec Details and Map. The summary page provides an overview of the insights, the Customer Details has the named indicates provides more details on customer insights, the Dealers Details more details on the dealers, the Car Spec page provides insights related to car features and the Map page provide geolocalization insights.
 
-#### Summary Page
+#### 3.6.1. Summary Page
 
 ![image](https://github.com/user-attachments/assets/9b6175b1-feb7-43c4-b8b1-02304456b766)
 
@@ -271,34 +275,34 @@ And when you click, you get the dashboard below:
 ![image](https://github.com/user-attachments/assets/39aa16f1-755f-49b3-b0ce-dbe7fcb00de5)
 
 
-#### Customer Details Page
+#### 3.6.2. Customer Details Page
 
 ![image](https://github.com/user-attachments/assets/ffac1c8a-aa31-4f40-82e7-a61e27e91ea8)
 
-#### Dealers Details Page
+#### 3.6.3. Dealers Details Page
 
 ![image](https://github.com/user-attachments/assets/42474ab8-fd35-4bce-ac33-85ab081a20b9)
 
-#### Car Spec Page
+#### 3.6.4. Car Spec Page
 
 ![image](https://github.com/user-attachments/assets/d6e7d3a4-f967-426f-a4f1-ef4e312c9299)
 
-#### Map Page
+#### 3.6.5.Map Page
 
 ![image](https://github.com/user-attachments/assets/3e04341a-e4d7-473b-b729-8b3fdab033e5)
 
 The report containing all the pages can be accessed [here](https://app.powerbi.com/view?r=eyJrIjoiZTA5NGQ0MzctNGFlOC00ZmRiLWJiMDYtYWRlNTBmZTVjM2E4IiwidCI6ImNhOWE4YjhjLTNlYTMtNDc5OS1hNDNlLTU1MTAzOThlN2EzYiIsImMiOjh9&pageName=96c58c348a5581de78ec)
 
-## Recommendations
-### For Dealerships/New Entrants:
+## 4. Recommendations
+### 4.1. For Dealerships/New Entrants:
 1.	Expand in High-Growth Regions: Prioritize Austin and Janesville for new dealerships or marketing spend.
 2.	Leverage Top Brands/Models: Stock more Chevrolet, Ford, and Dodge vehicles, and promote high-revenue models like Lexus LS400.
 3.	Target High-Income & Male Buyers: Tailor ads for SUVs/hatchbacks (e.g., luxury features for high-income males).
 4.	Seasonal Promotions: Boost inventory before peaks (May, September, December) and offer discounts in slower months (March).
-### For Customers:
+### 4.2. For Customers:
 •	Budget Buyers: Explore Buddy Storbeck’s Diesel Service Inc (avg. price $27,217; cheapest car at $900).
 •	Luxury Seekers: Consider Lexus LS400 (high revenue per unit) or German brands (premium appeal).
-### For Manufacturers:
+### 4.3. For Manufacturers:
 •	USA Brands: Ramp up production of SUVs/hatchbacks (high demand).
 •	Foreign Brands: Compete with US brands on other aspects such as innovation to gain more markets.
 
