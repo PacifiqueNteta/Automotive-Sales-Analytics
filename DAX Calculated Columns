@@ -1,0 +1,68 @@
+Car Country of origin = 
+SWITCH(
+  'Car Sales'[Company],
+  "Acura","Japan",
+  "Audi","Germany",
+  "BMW","Germany",
+  "Buick","USA",
+  "Cadillac","USA",
+  "Chevrolet","USA",
+  "Chrysler","USA",
+  "Dodge","USA",
+  "Ford","USA",
+  "Honda","Japan",
+  "Hyundai","South Korea",
+  "Infiniti","Japan",
+  "Jaguar","United Kingdom",
+  "Jeep","USA",
+  "Lexus","Japan",
+  "Lincoln","USA",
+  "Mercedes-B","Germany",
+  "Mercury","USA",
+  "Mitsubishi","Japan",
+  "Nissan","Japan",
+  "Oldsmobile","USA",
+  "Plymouth","USA",
+  "Pontiac","USA",
+  "Porsche","Germany",
+  "Saab","Sweden",
+  "Saturn","USA",
+  "Subaru","Japan",
+  "Toyota","Japan",
+  "Volkswagen","Germany",
+  "Volvo","Sweden",
+  "Unknown"
+)
+
+
+
+Dealer_State = 
+SWITCH(
+    'Car Sales'[Dealer_Region],
+    "Aurora", "Colorado",
+    "Austin", "Texas",
+    "Greenville", "South Carolina",
+    "Janesville", "Wisconsin",
+    "Middletown", "Ohio",
+    "Pasco", "Washington",
+    "Scottsdale", "Arizona",
+    "Unknown"
+)
+
+
+
+Income Level = 
+SWITCH(
+    TRUE(),
+     'Car Sales'[Annual Income] < 35000, "Lower Income",
+    'Car Sales'[Annual Income] <= 100000, "Middle Income",
+    'Car Sales'[Annual Income] <= 200000, "Upper-Middle",
+    "High Income"
+)
+
+
+Month-Year = 
+FORMAT(
+    'Car Sales'[Date],
+    "MMM YYYY"
+)
