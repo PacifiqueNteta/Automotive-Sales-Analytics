@@ -1,0 +1,146 @@
+Average Car Price = 
+DIVIDE(
+    SUM('Car Sales'[Price]),
+    DISTINCTCOUNT('Car Sales'[Car_id])
+)
+
+Average Revenue Per Customer = 
+DIVIDE(
+    [Total Revenue],
+    [Total Customers]
+)
+
+Company name labels = 
+SELECTEDVALUE('Car Sales'[Company])
+
+Company name labels placeholder = 0
+
+Dummy Measure = 0
+
+Highest Car Price = 
+MAX(
+    'Car Sales'[Price]
+)
+
+Item Filter = 
+VAR _Page = [# Pages Value]
+VAR _Number_of_Items = [# Items Value]
+VAR _ItemRrank = [Item Rank]
+VAR _ItemFilteredTbl =
+FILTER(
+    ALL('Car Sales'[Dealer_Name]),
+    _ItemRrank > (_Page - 1) * _Number_of_Items
+    && _ItemRrank <= (_Page) * _Number_of_Items
+)
+VAR _ItemsShow =
+IF(
+SELECTEDVALUE('Car Sales'[Dealer_Name]) IN _ItemFilteredTbl,
+1,
+0
+)
+RETURN 
+_ItemsShow
+
+
+
+Item Rank = 
+RANKX(
+    ALL('Car Sales'[Dealer_Name]),
+    [Total Sales(Cars Sold)]
+)
+
+
+Item Rank Label = "#" & [Item Rank]
+
+
+
+Lowest Car Price = 
+MIN(
+    'Car Sales'[Price]
+)
+
+
+Page Filter = 
+VAR _TotalNrItems =
+CALCULATE(
+    DISTINCTCOUNT( 'Car Sales'[Dealer_Name]),
+    ALL( 'Car Sales'[Dealer_Name] )
+)
+VAR _ShowNrItems = [# Items Value]
+VAR _NumberOfPages = 
+ROUNDUP(
+    DIVIDE(
+        _TotalNrItems,
+        _ShowNrItems
+    ), 0
+)
+VAR _PageFilter =
+IF(
+    SELECTEDVALUE( '# Pages'[# Pages] ) <= _NumberOfPages,
+    1,
+    0
+)
+RETURN
+    _PageFilter
+
+
+
+Previous Month Revenue = 
+CALCULATE(
+    [Total Revenue],
+    DATEADD(
+        'Date Table'[Date],
+        -1,
+        MONTH
+    )
+)
+
+
+
+Previous Month Sales = 
+CALCULATE(
+    [Total Sales(Cars Sold)],
+    DATEADD(
+        'Date Table'[Date],
+        -1,
+        MONTH
+    )
+)
+
+
+
+Revenue Target Gap = 
+[Total Revenue] - [Target Revenue]
+
+
+Sales Target Gap = 
+[Total Sales(Cars Sold)] - [Target Sales(Cars Sold)]
+
+
+Target Revenue = 
+[Previous Month Revenue] * 1.10
+
+
+Target Sales(Cars Sold) = 
+[Previous Month Sales] *1.10
+
+
+Total Customers = 
+DISTINCTCOUNT(
+    'Car Sales'[CustomerID]
+)
+
+
+Total Revenue = SUM('Car Sales'[Price])  
+
+
+
+Total Sales(Cars Sold) = 
+DISTINCTCOUNT(
+    'Car Sales'[Car_id]
+)
+
+
+
+
+
