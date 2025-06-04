@@ -81,7 +81,7 @@ After creating the date dimension table, I then created a relationship between t
 <img width="386" alt="Data Modelling" src="https://github.com/user-attachments/assets/2f1140cb-0bfa-4d84-8294-fb28e6188e43" />
 
 #### 3.3.2. Data Transformation
-Here I created some calculated measures and calculated columns to help me in my analysis. To keep things clean, I decided to create a table for all measures which I named *Measure Table*. All the calculated measures and calculated columns I created for this project can be accessed [here]()
+Here I created some calculated measures and calculated columns to help me in my analysis. To keep things clean, I decided to create a table for all measures which I named *Measure Table*. All the calculated measures can be accessed [here](https://github.com/PacifiqueNteta/Automotive-Sales-Analytics/blob/main/DAX%20Measures) and calculated columns [here]()
 
 **Here some measures I used:**
 ```DAX code
