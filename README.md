@@ -2,8 +2,7 @@
 
 ![image](https://github.com/user-attachments/assets/9b6175b1-feb7-43c4-b8b1-02304456b766)
 
-## Watch a video demo [here](https://drive.google.com/file/d/1QBYXfnFoi6blxJIJ-H-wpLiky0m8Tm1d/view?usp=drive_link)
-[View Dashboard]([https://app.powerbi.com/view?r=eyJrIjoiZTA5NGQ0MzctNGFlOC00ZmRiLWJiMDYtYWRlNTBmZTVjM2E4IiwidCI6ImNhOWE4YjhjLTNlYTMtNDc5OS1hNDNlLTU1MTAzOThlN2EzYiIsImMiOjh9])
+## Watch a video demo [here](https://drive.google.com/file/d/1QBYXfnFoi6blxJIJ-H-wpLiky0m8Tm1d/view?usp=drive_link) or view the dashboard [here](https://app.powerbi.com/view?r=eyJrIjoiZTA5NGQ0MzctNGFlOC00ZmRiLWJiMDYtYWRlNTBmZTVjM2E4IiwidCI6ImNhOWE4YjhjLTNlYTMtNDc5OS1hNDNlLTU1MTAzOThlN2EzYiIsImMiOjh9)
 ---
 
 ## Table of Content
