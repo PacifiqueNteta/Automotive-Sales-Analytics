@@ -3,6 +3,7 @@
 ![image](https://github.com/user-attachments/assets/9b6175b1-feb7-43c4-b8b1-02304456b766)
 
 ## Watch a video demo [here](https://drive.google.com/file/d/1QBYXfnFoi6blxJIJ-H-wpLiky0m8Tm1d/view?usp=drive_link)
+## [View Dashboard]([https://app.powerbi.com/view?r=eyJrIjoiZTA5NGQ0MzctNGFlOC00ZmRiLWJiMDYtYWRlNTBmZTVjM2E4IiwidCI6ImNhOWE4YjhjLTNlYTMtNDc5OS1hNDNlLTU1MTAzOThlN2EzYiIsImMiOjh9])
 ---
 
 ## Table of Content
@@ -295,7 +296,7 @@ And when you click, you get the dashboard below:
 
 ![image](https://github.com/user-attachments/assets/3e04341a-e4d7-473b-b729-8b3fdab033e5)
 
-The report containing all the pages can be accessed [here](https://app.powerbi.com/view?r=eyJrIjoiZTA5NGQ0MzctNGFlOC00ZmRiLWJiMDYtYWRlNTBmZTVjM2E4IiwidCI6ImNhOWE4YjhjLTNlYTMtNDc5OS1hNDNlLTU1MTAzOThlN2EzYiIsImMiOjh9&pageName=96c58c348a5581de78ec)
+The report containing all the pages can be accessed [here](https://app.powerbi.com/view?r=eyJrIjoiZTA5NGQ0MzctNGFlOC00ZmRiLWJiMDYtYWRlNTBmZTVjM2E4IiwidCI6ImNhOWE4YjhjLTNlYTMtNDc5OS1hNDNlLTU1MTAzOThlN2EzYiIsImMiOjh9)
 
 ## 4. Recommendations
 ### 4.1. For Dealerships/New Entrants:
