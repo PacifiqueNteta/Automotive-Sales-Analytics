@@ -1,6 +1,8 @@
 # 🚗 Automotive Sales Performance & Customer Behavior Analysis (2022–2023)
 
-![image](https://github.com/user-attachments/assets/9b6175b1-feb7-43c4-b8b1-02304456b766)
+
+<img width="3780" height="1890" alt="Car Sales Header" src="https://github.com/user-attachments/assets/df6fa6d0-a3ba-474e-aa7b-ed7370c15342" />
+
 
 [▶️ Watch Demo](https://drive.google.com/file/d/1QBYXfnFoi6blxJIJ-H-wpLiky0m8Tm1d/view?usp=drive_link)
 
